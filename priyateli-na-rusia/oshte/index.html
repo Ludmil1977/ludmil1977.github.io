@@ -25,6 +25,8 @@
     .number { white-space: nowrap; font-variant-numeric: tabular-nums; }
     .dest { white-space: nowrap; }
     .note { color: #42564d; }
+    .sort { margin: 1rem 0 .5rem; }
+    .sort select { font: inherit; color: inherit; background: #fff; border: 1px solid #547064; border-radius: .3rem; padding: .25rem .45rem; }
   </style>
 </head>
 <body>
@@ -34,60 +36,66 @@
     <p>69 допълнителни резултата. Тире в колоната „№“ означава, че адресът липсва в предоставения списък. Две групи могат да имат едно и също заглавие и различни адреси.</p>
     <p>Колоната „Основание“ посочва връзката по име, описание или публичен източник. Темата или името на групата сами по себе си не потвърждават официална принадлежност или позиция на членовете. Facebook показва съдържанието на поверителните групи според членството.</p>
     <h2>Facebook (43)</h2>
+    <div class="sort" hidden><label for="facebook-results-sort">Подреди по</label>
+      <select id="facebook-results-sort" data-sort-table="facebook-results" aria-controls="facebook-results"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option><option value="members">Брой членове (най-много първо)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="Facebook" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="facebook-results">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col" class="amount" data-sort-key="members">Членове</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
-          <tr><td class="number">—</td><td>Прогресивна България</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/929870983028305/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">1</td></tr>
-          <tr><td class="number">—</td><td>Прогресивна България</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/459262003020950/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">2</td></tr>
-          <tr><td class="number">—</td><td>Прогресивна България</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/804626828664965/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">3</td></tr>
-          <tr><td class="number">—</td><td>Прогресивна България - Пещера</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1030806889578110/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">4</td></tr>
-          <tr><td class="number">—</td><td>ПРОГРЕСИВНА БЪЛГАРИЯ</td><td>Група · поверителна</td><td><span class="dest"><a href="https://www.facebook.com/groups/425670158660165/">Отвори</a></span></td><td>Прогресивна България</td><td>Чака одобрение</td><td class="number">5</td></tr>
-          <tr><td class="number">—</td><td>ПОДКРЕПА ЗА ПРОГРЕСИВНА БЪЛГАРИЯ</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1054951541312987/">Отвори</a></span></td><td>Подкрепа за Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">6</td></tr>
-          <tr><td class="number">—</td><td>Илияна Йотова - Президент на всички българи</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/27605544769107987/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">7</td></tr>
-          <tr><td class="number">—</td><td>Аз подкрепям Румен Радев и Илияна Йотова</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1039430513215911/">Отвори</a></span></td><td>Подкрепа за Румен Радев и Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">8</td></tr>
-          <tr><td class="number">—</td><td>ИЛИЯНА ЙОТОВА- ПЪРВАТА ЖЕНА ПРЕЗИДЕНТ</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1058562636888828/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">9</td></tr>
-          <tr><td class="number">—</td><td>ИЛИЯНА ЙОТОВА</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1028108283631819/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">10</td></tr>
-          <tr><td class="number">—</td><td>Заедно за Президента Илияна Йотова</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1944840542757843/">Отвори</a></span></td><td>Подкрепа за Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">11</td></tr>
-          <tr><td class="number">—</td><td>ИЛИЯНА ЙОТОВА- НАШИЯ ПРЕЗИДЕНТ</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1329116582591003/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">12</td></tr>
-          <tr><td class="number">—</td><td>Костадин Костадинов за Министър-Председател на Република България</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1475732159495510/">Отвори</a></span></td><td>Подкрепа за Костадин Костадинов</td><td><strong>Членувам</strong></td><td class="number">13</td></tr>
-          <tr><td class="number">—</td><td>ПП Възраждане</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/vazrazhdane.bg/">Отвори</a></span></td><td>ПП „Възраждане“</td><td><strong>Членувам</strong></td><td class="number">14</td></tr>
-          <tr><td class="number">—</td><td>Костадинов и Волгин - Бъдещето на България</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/4560565584188651/">Отвори</a></span></td><td>Подкрепа за Костадин Костадинов и Петър Волгин</td><td><strong>Членувам</strong></td><td class="number">15</td></tr>
-          <tr><td class="number">—</td><td>Избирам Възраждане</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/616577524571601/">Отвори</a></span></td><td>Подкрепа за ПП „Възраждане“</td><td><strong>Членувам</strong></td><td class="number">16</td></tr>
-          <tr><td class="number">—</td><td>Възраждане - Област Монтана</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1957793634591440/">Отвори</a></span></td><td>ПП „Възраждане“, Монтана</td><td><strong>Членувам</strong></td><td class="number">17</td></tr>
-          <tr><td class="number">—</td><td>Фен група на Костадин Костадинов, лидер на ПП &quot;Възраждане&quot;</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/kostadinkostadinov/">Отвори</a></span></td><td>Фен група за Костадин Костадинов</td><td><strong>Членувам</strong></td><td class="number">18</td></tr>
-          <tr><td class="number">—</td><td>ВЪЗРАЖДАНЕ БЕЛЕНЕ</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/2097043110445788/">Отвори</a></span></td><td>„Възраждане“, Белене</td><td><strong>Членувам</strong></td><td class="number">19</td></tr>
-          <tr><td class="number">—</td><td>Възраждане Берн (Швейцария)</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/254438420811651/">Отвори</a></span></td><td>„Възраждане“, Берн</td><td><strong>Членувам</strong></td><td class="number">20</td></tr>
-          <tr><td class="number">—</td><td>Проф. Иво Христов за лидер на БСП</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/493892615360400/">Отвори</a></span></td><td>Подкрепа за проф. Иво Христов</td><td><strong>Членувам</strong></td><td class="number">21</td></tr>
-          <tr><td class="number">—</td><td>Проф. Иво Христов- въпросиТЕ и отговориТЕ</td><td>Група · поверителна</td><td><span class="dest"><a href="https://www.facebook.com/groups/129557947758813/">Отвори</a></span></td><td>Проф. Иво Христов</td><td>Чака одобрение</td><td class="number">22</td></tr>
-          <tr><td class="number">—</td><td>Аз подкрепям Киро Брейка, Ивелин Михайлов и Исторически Парк</td><td>Група · поверителна</td><td><span class="dest"><a href="https://www.facebook.com/groups/1012313260593309/">Отвори</a></span></td><td>Подкрепа за Киро Брейка и Ивелин Михайлов</td><td><strong>Членувам</strong></td><td class="number">23</td></tr>
-          <tr><td class="number">—</td><td>ФАЛИРАЙ С КИРО БРЕЙКА-ОРИГИНАЛА</td><td>Група · поверителна</td><td><span class="dest"><a href="https://www.facebook.com/groups/2351296961692515/">Отвори</a></span></td><td>Киро Брейка</td><td><strong>Членувам</strong></td><td class="number">24</td></tr>
-          <tr><td class="number">—</td><td>ГРУПАТА НА НЕ ФЕНОВЕ НА КИРО БРЕЙКА</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/912722760464395/">Отвори</a></span></td><td>Критична група за Киро Брейка</td><td><strong>Членувам</strong></td><td class="number">25</td></tr>
-          <tr><td class="number">—</td><td>Русофили на България</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/673246713893459/">Отвори</a></span></td><td>Русофили</td><td><strong>Членувам</strong></td><td class="number">26</td></tr>
-          <tr><td class="number">—</td><td>РУСОФИЛИ- Несебър</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1723352574587825/">Отвори</a></span></td><td>Русофили, Несебър</td><td><strong>Членувам</strong></td><td class="number">27</td></tr>
-          <tr><td class="number">—</td><td>РУСОФИЛИ</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/257614811404423/">Отвори</a></span></td><td>Русофили</td><td><strong>Членувам</strong></td><td class="number">28</td></tr>
-          <tr><td class="number">—</td><td>РУСОФИЛИ</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1628250007420785/">Отвори</a></span></td><td>Русофили</td><td><strong>Членувам</strong></td><td class="number">29</td></tr>
-          <tr><td class="number">—</td><td>Русофили Варна</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/428923630494020/">Отвори</a></span></td><td>Русофили, Варна</td><td><strong>Членувам</strong></td><td class="number">30</td></tr>
-          <tr><td class="number">—</td><td>Приятели на Русия 🇷🇺🇧🇬</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1803091943782000/">Отвори</a></span></td><td>Подкрепа за Русия</td><td><strong>Членувам</strong></td><td class="number">31</td></tr>
-          <tr><td class="number">—</td><td>Обичам Русия</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/676083607661503/">Отвори</a></span></td><td>Подкрепа за Русия</td><td>Не членувам</td><td class="number">32</td></tr>
-          <tr><td class="number">—</td><td>ОБЩЕСТВО ЗА ИЗЛИЗАНЕ ОТ СЗО И НАТО</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/738506393900566/">Отвори</a></span></td><td>Излизане от НАТО и СЗО</td><td>Не членувам</td><td class="number">33</td></tr>
-          <tr><td class="number">—</td><td>БЪЛГАРИ ПРОТИВ ЕВРОЗОНА, ЕС И НАТО</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/702200185565056/">Отвори</a></span></td><td>Против ЕС, НАТО и еврозоната</td><td>Не членувам</td><td class="number">34</td></tr>
-          <tr><td class="number">—</td><td>Bulgaria supports Russia and Putin</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/6370912349610254/">Отвори</a></span></td><td>Подкрепа за Русия и Владимир Путин</td><td>Не членувам</td><td class="number">35</td></tr>
-          <tr><td class="number">—</td><td>Обичам Русия! Обичам България!</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/673932259656935/">Отвори</a></span></td><td>Подкрепа за Русия</td><td>Не членувам</td><td class="number">36</td></tr>
-          <tr><td class="number">—</td><td>Фенове на Владимир Путин</td><td>Група · публична</td><td><span class="dest"><a href="https://www.facebook.com/groups/1021619718774703/">Отвори</a></span></td><td>Подкрепа за Владимир Путин</td><td>Не членувам</td><td class="number">37</td></tr>
-          <tr><td class="number">—</td><td>Пламен Пасков</td><td>Публична страница</td><td><span class="dest"><a href="https://www.facebook.com/paskov.plamen">Отвори</a></span></td><td>Пламен Пасков</td><td>—</td><td class="number">38</td></tr>
-          <tr><td class="number">—</td><td>Пламен Пасков Ru</td><td>Публична страница</td><td><span class="dest"><a href="https://www.facebook.com/PlamenPaskovRu">Отвори</a></span></td><td>Рускоезична страница</td><td>—</td><td class="number">39</td></tr>
-          <tr><td class="number">—</td><td>Проф. Иво Христов</td><td>Публична страница</td><td><span class="dest"><a href="https://www.facebook.com/profesorivohristov">Отвори</a></span></td><td>Проф. Иво Христов, социолог</td><td>—</td><td class="number">40</td></tr>
-          <tr><td class="number">—</td><td>Проф. Иво Христов - социология и просвещение</td><td>Публична страница</td><td><span class="dest"><a href="https://www.facebook.com/ProfessorIvoHristov">Отвори</a></span></td><td>Проф. Иво Христов, социология</td><td>—</td><td class="number">41</td></tr>
-          <tr><td class="number">—</td><td>Мартин Карбовски</td><td>Публична страница</td><td><span class="dest"><a href="https://www.facebook.com/martinkarbovskiofficial">Отвори</a></span></td><td>Мартин Карбовски</td><td>—</td><td class="number">42</td></tr>
-          <tr><td class="number">—</td><td>Киро Брейка - Оригинала</td><td>Публична страница</td><td><span class="dest"><a href="https://www.facebook.com/Kir0Break">Отвори</a></span></td><td>Киро Брейка</td><td>—</td><td class="number">43</td></tr>
+          <tr><td class="number">—</td><td>Прогресивна България</td><td>Група · публична</td><td class="amount" data-sort-value="12800">12,8 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/929870983028305/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">1</td></tr>
+          <tr><td class="number">—</td><td>Прогресивна България</td><td>Група · публична</td><td class="amount" data-sort-value="767">767</td><td><span class="dest"><a href="https://www.facebook.com/groups/459262003020950/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">2</td></tr>
+          <tr><td class="number">—</td><td>Прогресивна България</td><td>Група · публична</td><td class="amount" data-sort-value="5400">5,4 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/804626828664965/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">3</td></tr>
+          <tr><td class="number">—</td><td>Прогресивна България - Пещера</td><td>Група · публична</td><td class="amount" data-sort-value="303">303</td><td><span class="dest"><a href="https://www.facebook.com/groups/1030806889578110/">Отвори</a></span></td><td>Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">4</td></tr>
+          <tr><td class="number">—</td><td>ПРОГРЕСИВНА БЪЛГАРИЯ</td><td>Група · поверителна</td><td class="amount" data-sort-value="1200">1,2 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/425670158660165/">Отвори</a></span></td><td>Прогресивна България</td><td>Чака одобрение</td><td class="number">5</td></tr>
+          <tr><td class="number">—</td><td>ПОДКРЕПА ЗА ПРОГРЕСИВНА БЪЛГАРИЯ</td><td>Група · публична</td><td class="amount" data-sort-value="21500">21,5 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1054951541312987/">Отвори</a></span></td><td>Подкрепа за Прогресивна България</td><td><strong>Членувам</strong></td><td class="number">6</td></tr>
+          <tr><td class="number">—</td><td>Илияна Йотова - Президент на всички българи</td><td>Група · публична</td><td class="amount" data-sort-value="14600">14,6 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/27605544769107987/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">7</td></tr>
+          <tr><td class="number">—</td><td>Аз подкрепям Румен Радев и Илияна Йотова</td><td>Група · публична</td><td class="amount" data-sort-value="61200">61,2 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1039430513215911/">Отвори</a></span></td><td>Подкрепа за Румен Радев и Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">8</td></tr>
+          <tr><td class="number">—</td><td>ИЛИЯНА ЙОТОВА- ПЪРВАТА ЖЕНА ПРЕЗИДЕНТ</td><td>Група · публична</td><td class="amount" data-sort-value="4500">4,5 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1058562636888828/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">9</td></tr>
+          <tr><td class="number">—</td><td>ИЛИЯНА ЙОТОВА</td><td>Група · публична</td><td class="amount" data-sort-value="326">326</td><td><span class="dest"><a href="https://www.facebook.com/groups/1028108283631819/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">10</td></tr>
+          <tr><td class="number">—</td><td>Заедно за Президента Илияна Йотова</td><td>Група · публична</td><td class="amount" data-sort-value="4100">4,1 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1944840542757843/">Отвори</a></span></td><td>Подкрепа за Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">11</td></tr>
+          <tr><td class="number">—</td><td>ИЛИЯНА ЙОТОВА- НАШИЯ ПРЕЗИДЕНТ</td><td>Група · публична</td><td class="amount" data-sort-value="13700">13,7 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1329116582591003/">Отвори</a></span></td><td>Илияна Йотова</td><td><strong>Членувам</strong></td><td class="number">12</td></tr>
+          <tr><td class="number">—</td><td>Костадин Костадинов за Министър-Председател на Република България</td><td>Група · публична</td><td class="amount" data-sort-value="49000">49,0 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1475732159495510/">Отвори</a></span></td><td>Подкрепа за Костадин Костадинов</td><td><strong>Членувам</strong></td><td class="number">13</td></tr>
+          <tr><td class="number">—</td><td>ПП Възраждане</td><td>Група · публична</td><td class="amount" data-sort-value="42600">42,6 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/vazrazhdane.bg/">Отвори</a></span></td><td>ПП „Възраждане“</td><td><strong>Членувам</strong></td><td class="number">14</td></tr>
+          <tr><td class="number">—</td><td>Костадинов и Волгин - Бъдещето на България</td><td>Група · публична</td><td class="amount" data-sort-value="185">185</td><td><span class="dest"><a href="https://www.facebook.com/groups/4560565584188651/">Отвори</a></span></td><td>Подкрепа за Костадин Костадинов и Петър Волгин</td><td><strong>Членувам</strong></td><td class="number">15</td></tr>
+          <tr><td class="number">—</td><td>Избирам Възраждане</td><td>Група · публична</td><td class="amount" data-sort-value="6200">6,2 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/616577524571601/">Отвори</a></span></td><td>Подкрепа за ПП „Възраждане“</td><td><strong>Членувам</strong></td><td class="number">16</td></tr>
+          <tr><td class="number">—</td><td>Възраждане - Област Монтана</td><td>Група · публична</td><td class="amount" data-sort-value="3100">3,1 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1957793634591440/">Отвори</a></span></td><td>ПП „Възраждане“, Монтана</td><td><strong>Членувам</strong></td><td class="number">17</td></tr>
+          <tr><td class="number">—</td><td>Фен група на Костадин Костадинов, лидер на ПП &quot;Възраждане&quot;</td><td>Група · публична</td><td class="amount" data-sort-value="1700">1,7 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/kostadinkostadinov/">Отвори</a></span></td><td>Фен група за Костадин Костадинов</td><td><strong>Членувам</strong></td><td class="number">18</td></tr>
+          <tr><td class="number">—</td><td>ВЪЗРАЖДАНЕ БЕЛЕНЕ</td><td>Група · публична</td><td class="amount" data-sort-value="2000">2,0 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/2097043110445788/">Отвори</a></span></td><td>„Възраждане“, Белене</td><td><strong>Членувам</strong></td><td class="number">19</td></tr>
+          <tr><td class="number">—</td><td>Възраждане Берн (Швейцария)</td><td>Група · публична</td><td class="amount" data-sort-value="1300">1,3 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/254438420811651/">Отвори</a></span></td><td>„Възраждане“, Берн</td><td><strong>Членувам</strong></td><td class="number">20</td></tr>
+          <tr><td class="number">—</td><td>Проф. Иво Христов за лидер на БСП</td><td>Група · публична</td><td class="amount" data-sort-value="2200">2,2 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/493892615360400/">Отвори</a></span></td><td>Подкрепа за проф. Иво Христов</td><td><strong>Членувам</strong></td><td class="number">21</td></tr>
+          <tr><td class="number">—</td><td>Проф. Иво Христов- въпросиТЕ и отговориТЕ</td><td>Група · поверителна</td><td class="amount" data-sort-value="54300">54,3 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/129557947758813/">Отвори</a></span></td><td>Проф. Иво Христов</td><td>Чака одобрение</td><td class="number">22</td></tr>
+          <tr><td class="number">—</td><td>Аз подкрепям Киро Брейка, Ивелин Михайлов и Исторически Парк</td><td>Група · поверителна</td><td class="amount" data-sort-value="587">587</td><td><span class="dest"><a href="https://www.facebook.com/groups/1012313260593309/">Отвори</a></span></td><td>Подкрепа за Киро Брейка и Ивелин Михайлов</td><td><strong>Членувам</strong></td><td class="number">23</td></tr>
+          <tr><td class="number">—</td><td>ФАЛИРАЙ С КИРО БРЕЙКА-ОРИГИНАЛА</td><td>Група · поверителна</td><td class="amount" data-sort-value="4300">4,3 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/2351296961692515/">Отвори</a></span></td><td>Киро Брейка</td><td><strong>Членувам</strong></td><td class="number">24</td></tr>
+          <tr><td class="number">—</td><td>ГРУПАТА НА НЕ ФЕНОВЕ НА КИРО БРЕЙКА</td><td>Група · публична</td><td class="amount" data-sort-value="485">485</td><td><span class="dest"><a href="https://www.facebook.com/groups/912722760464395/">Отвори</a></span></td><td>Критична група за Киро Брейка</td><td><strong>Членувам</strong></td><td class="number">25</td></tr>
+          <tr><td class="number">—</td><td>Русофили на България</td><td>Група · публична</td><td class="amount" data-sort-value="709">709</td><td><span class="dest"><a href="https://www.facebook.com/groups/673246713893459/">Отвори</a></span></td><td>Русофили</td><td><strong>Членувам</strong></td><td class="number">26</td></tr>
+          <tr><td class="number">—</td><td>РУСОФИЛИ- Несебър</td><td>Група · публична</td><td class="amount" data-sort-value="1500">1,5 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1723352574587825/">Отвори</a></span></td><td>Русофили, Несебър</td><td><strong>Членувам</strong></td><td class="number">27</td></tr>
+          <tr><td class="number">—</td><td>РУСОФИЛИ</td><td>Група · публична</td><td class="amount" data-sort-value="45000">45,0 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/257614811404423/">Отвори</a></span></td><td>Русофили</td><td><strong>Членувам</strong></td><td class="number">28</td></tr>
+          <tr><td class="number">—</td><td>РУСОФИЛИ</td><td>Група · публична</td><td class="amount" data-sort-value="236">236</td><td><span class="dest"><a href="https://www.facebook.com/groups/1628250007420785/">Отвори</a></span></td><td>Русофили</td><td><strong>Членувам</strong></td><td class="number">29</td></tr>
+          <tr><td class="number">—</td><td>Русофили Варна</td><td>Група · публична</td><td class="amount" data-sort-value="1400">1,4 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/428923630494020/">Отвори</a></span></td><td>Русофили, Варна</td><td><strong>Членувам</strong></td><td class="number">30</td></tr>
+          <tr><td class="number">—</td><td>Приятели на Русия 🇷🇺🇧🇬</td><td>Група · публична</td><td class="amount" data-sort-value="10200">10,2 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1803091943782000/">Отвори</a></span></td><td>Подкрепа за Русия</td><td><strong>Членувам</strong></td><td class="number">31</td></tr>
+          <tr><td class="number">—</td><td>Обичам Русия</td><td>Група · публична</td><td class="amount" data-sort-value="12600">12,6 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/676083607661503/">Отвори</a></span></td><td>Подкрепа за Русия</td><td>Не членувам</td><td class="number">32</td></tr>
+          <tr><td class="number">—</td><td>ОБЩЕСТВО ЗА ИЗЛИЗАНЕ ОТ СЗО И НАТО</td><td>Група · публична</td><td class="amount" data-sort-value="328">328</td><td><span class="dest"><a href="https://www.facebook.com/groups/738506393900566/">Отвори</a></span></td><td>Излизане от НАТО и СЗО</td><td>Не членувам</td><td class="number">33</td></tr>
+          <tr><td class="number">—</td><td>БЪЛГАРИ ПРОТИВ ЕВРОЗОНА, ЕС И НАТО</td><td>Група · публична</td><td class="amount" data-sort-value="240">240</td><td><span class="dest"><a href="https://www.facebook.com/groups/702200185565056/">Отвори</a></span></td><td>Против ЕС, НАТО и еврозоната</td><td>Не членувам</td><td class="number">34</td></tr>
+          <tr><td class="number">—</td><td>Bulgaria supports Russia and Putin</td><td>Група · публична</td><td class="amount" data-sort-value="16900">16,9 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/6370912349610254/">Отвори</a></span></td><td>Подкрепа за Русия и Владимир Путин</td><td>Не членувам</td><td class="number">35</td></tr>
+          <tr><td class="number">—</td><td>Обичам Русия! Обичам България!</td><td>Група · публична</td><td class="amount" data-sort-value="13800">13,8 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/673932259656935/">Отвори</a></span></td><td>Подкрепа за Русия</td><td>Не членувам</td><td class="number">36</td></tr>
+          <tr><td class="number">—</td><td>Фенове на Владимир Путин</td><td>Група · публична</td><td class="amount" data-sort-value="69700">69,7 хил.</td><td><span class="dest"><a href="https://www.facebook.com/groups/1021619718774703/">Отвори</a></span></td><td>Подкрепа за Владимир Путин</td><td>Не членувам</td><td class="number">37</td></tr>
+          <tr><td class="number">—</td><td>Пламен Пасков</td><td>Публична страница</td><td class="amount">—</td><td><span class="dest"><a href="https://www.facebook.com/paskov.plamen">Отвори</a></span></td><td>Пламен Пасков</td><td>—</td><td class="number">38</td></tr>
+          <tr><td class="number">—</td><td>Пламен Пасков Ru</td><td>Публична страница</td><td class="amount">—</td><td><span class="dest"><a href="https://www.facebook.com/PlamenPaskovRu">Отвори</a></span></td><td>Рускоезична страница</td><td>—</td><td class="number">39</td></tr>
+          <tr><td class="number">—</td><td>Проф. Иво Христов</td><td>Публична страница</td><td class="amount">—</td><td><span class="dest"><a href="https://www.facebook.com/profesorivohristov">Отвори</a></span></td><td>Проф. Иво Христов, социолог</td><td>—</td><td class="number">40</td></tr>
+          <tr><td class="number">—</td><td>Проф. Иво Христов - социология и просвещение</td><td>Публична страница</td><td class="amount">—</td><td><span class="dest"><a href="https://www.facebook.com/ProfessorIvoHristov">Отвори</a></span></td><td>Проф. Иво Христов, социология</td><td>—</td><td class="number">41</td></tr>
+          <tr><td class="number">—</td><td>Мартин Карбовски</td><td>Публична страница</td><td class="amount">—</td><td><span class="dest"><a href="https://www.facebook.com/martinkarbovskiofficial">Отвори</a></span></td><td>Мартин Карбовски</td><td>—</td><td class="number">42</td></tr>
+          <tr><td class="number">—</td><td>Киро Брейка - Оригинала</td><td>Публична страница</td><td class="amount">—</td><td><span class="dest"><a href="https://www.facebook.com/Kir0Break">Отвори</a></span></td><td>Киро Брейка</td><td>—</td><td class="number">43</td></tr>
         </tbody>
       </table>
     </div>
     <h2>Telegram (8)</h2>
+    <div class="sort" hidden><label for="platform-2-sort">Подреди по</label>
+      <select id="platform-2-sort" data-sort-table="platform-2" aria-controls="platform-2"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="Telegram" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="platform-2">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
           <tr><td class="number">—</td><td>Пламен Пасков ТВ</td><td>Публичен канал</td><td><span class="dest"><a href="https://t.me/pppaskov">Отвори</a></span></td><td>Пламен Пасков</td><td>—</td><td class="number">44</td></tr>
           <tr><td class="number">—</td><td>Пламен Пасков Ru</td><td>Публичен канал</td><td><span class="dest"><a href="https://t.me/PlamenPaskovRu">Отвори</a></span></td><td>Рускоезичен канал</td><td>—</td><td class="number">45</td></tr>
@@ -101,9 +109,12 @@
       </table>
     </div>
     <h2>Instagram (2)</h2>
+    <div class="sort" hidden><label for="platform-3-sort">Подреди по</label>
+      <select id="platform-3-sort" data-sort-table="platform-3" aria-controls="platform-3"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="Instagram" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="platform-3">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
           <tr><td class="number">—</td><td>Мартин Карбовски</td><td>Профил</td><td><span class="dest"><a href="https://www.instagram.com/martinkarbowski/">Отвори</a></span></td><td>Адрес, посочен от издателя на предаването (<a href="https://lentata.com/politicheskoto-shou-s-karbovski-i-dachkov-se-zavrscha-tazi-vecher-v-20-00">източник</a>)</td><td>—</td><td class="number">52</td></tr>
           <tr><td class="number">—</td><td>Киро Брейка</td><td>Публичен профил</td><td><span class="dest"><a href="https://www.instagram.com/kirobreakofficial/">Отвори</a></span></td><td>Киро Брейка</td><td>—</td><td class="number">53</td></tr>
@@ -111,9 +122,12 @@
       </table>
     </div>
     <h2>YouTube (4)</h2>
+    <div class="sort" hidden><label for="platform-4-sort">Подреди по</label>
+      <select id="platform-4-sort" data-sort-table="platform-4" aria-controls="platform-4"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="YouTube" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="platform-4">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
           <tr><td class="number">—</td><td>д-р Пасков</td><td>Публичен канал</td><td><span class="dest"><a href="https://www.youtube.com/channel/UCfwkTKs4TRtSenNM-AOCvaQ">Отвори</a></span></td><td>Посочен в „Пламен Пасков ТВ“ (<a href="https://t.me/s/pppaskov?before=4206">източник</a>)</td><td>—</td><td class="number">54</td></tr>
           <tr><td class="number">—</td><td>Пламен Пасков Ru</td><td>Публичен канал</td><td><span class="dest"><a href="https://www.youtube.com/channel/UCDHp_QqD5_S4KgmkmVKbotA">Отвори</a></span></td><td>Посочен в рускоезичния Telegram канал (<a href="https://t.me/s/PlamenPaskovRu">източник</a>)</td><td>—</td><td class="number">55</td></tr>
@@ -123,9 +137,12 @@
       </table>
     </div>
     <h2>TikTok (2)</h2>
+    <div class="sort" hidden><label for="platform-5-sort">Подреди по</label>
+      <select id="platform-5-sort" data-sort-table="platform-5" aria-controls="platform-5"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="TikTok" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="platform-5">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
           <tr><td class="number">—</td><td>д-р Пасков</td><td>Публичен профил</td><td><span class="dest"><a href="https://www.tiktok.com/@dr.paskov">Отвори</a></span></td><td>Посочен в „Пламен Пасков ТВ“ (<a href="https://t.me/s/pppaskov?before=4206">източник</a>)</td><td>—</td><td class="number">58</td></tr>
           <tr><td class="number">—</td><td>Мартин Карбовски</td><td>Публичен профил</td><td><span class="dest"><a href="https://www.tiktok.com/@martinkarbowski">Отвори</a></span></td><td>Посочен от издателя на предаването (<a href="https://lentata.com/politicheskoto-shou-s-karbovski-i-dachkov-se-zavrscha-tazi-vecher-v-20-00">източник</a>)</td><td>—</td><td class="number">59</td></tr>
@@ -133,9 +150,12 @@
       </table>
     </div>
     <h2>Patreon (3)</h2>
+    <div class="sort" hidden><label for="platform-6-sort">Подреди по</label>
+      <select id="platform-6-sort" data-sort-table="platform-6" aria-controls="platform-6"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="Patreon" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="platform-6">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
           <tr><td class="number">—</td><td>Пламен Пасков</td><td>Профил на автор</td><td><span class="dest"><a href="https://www.patreon.com/cw/plamenpaskov">Отвори</a></span></td><td>Пламен Пасков</td><td>—</td><td class="number">60</td></tr>
           <tr><td class="number">—</td><td>Мартин Карбовски</td><td>Профил на автор</td><td><span class="dest"><a href="https://www.patreon.com/c/Martin_Karbowski">Отвори</a></span></td><td>Мартин Карбовски</td><td>—</td><td class="number">61</td></tr>
@@ -144,9 +164,12 @@
       </table>
     </div>
     <h2>Уебсайт (7)</h2>
+    <div class="sort" hidden><label for="platform-7-sort">Подреди по</label>
+      <select id="platform-7-sort" data-sort-table="platform-7" aria-controls="platform-7"><option value="original">Първоначален ред</option><option value="name">Име (А–Я)</option></select>
+    </div>
     <div class="table-wrap" role="region" aria-label="Уебсайт" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">№</th><th scope="col">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
+      <table id="platform-7">
+        <thead><tr><th scope="col">№</th><th scope="col" data-sort-key="name">Име</th><th scope="col">Вид</th><th scope="col">Линк</th><th scope="col">Основание</th><th scope="col">Моето членство</th><th scope="col">Пореден №</th></tr></thead>
         <tbody>
           <tr><td class="number">—</td><td>Мартин Карбовски</td><td>Публичен сайт</td><td><span class="dest"><a href="https://martinkarbowski.com/">Отвори</a></span></td><td>Сайт на автора</td><td>—</td><td class="number">63</td></tr>
           <tr><td class="number">—</td><td>ПП „Възраждане“</td><td>Публичен сайт</td><td><span class="dest"><a href="https://vazrazhdane.bg/">Отвори</a></span></td><td>Официален сайт на партията</td><td>—</td><td class="number">64</td></tr>
@@ -158,8 +181,10 @@
         </tbody>
       </table>
     </div>
+    <p class="note">Броят членове е изписан във вида, в който го показва Facebook на 18 ноември 2026 г.</p>
     <p class="note">Членството във Facebook групите е проверено на 18 ноември 2026 г. Тирето означава, че записът е профил, страница, канал или друг източник извън Facebook групите.</p>
     <p class="note">Справка към 18 ноември 2026 г.</p>
   </main>
+  <script defer src="../group-tables.js"></script>
 </body>
 </html>
