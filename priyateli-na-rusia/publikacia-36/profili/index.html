@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Публикация36 / профили и страница</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6f2; color: #162b24; font: 1rem/1.55 system-ui, sans-serif; }
+    main { max-width: 76rem; margin: auto; padding: clamp(1rem, 4vw, 3rem); }
+    h1 { font-size: clamp(1.85rem, 5vw, 3rem); line-height: 1.14; margin: 1rem 0; }
+    h2 { font-size: 1.15rem; margin: 1.6rem 0 .6rem; }
+    p { max-width: 48rem; margin: .65rem 0 1rem; }
+    a { color: #165a43; text-decoration-thickness: .08em; text-underline-offset: .16em; }
+    a:hover { color: #103728; }
+    :focus-visible { outline: 3px solid #9a5609; outline-offset: 3px; }
+    .table-wrap { overflow-x: auto; background: #fff; border: 1px solid #c5d0c9; border-radius: .65rem; margin: .8rem 0 1.3rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: .62rem .78rem; text-align: left; vertical-align: top; }
+    th { background: #174733; color: #fff; white-space: nowrap; }
+    td { border-bottom: 1px solid #e4eae6; }
+    td:nth-child(2) { min-width: 12rem; overflow-wrap: anywhere; }
+    tr:nth-child(even) td { background: #f8faf8; }
+    tr:last-child td { border-bottom: 0; }
+    .number { white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .dest { white-space: nowrap; }
+    .note { color: #42564d; }
+    .sort { margin: 1rem 0 .5rem; }
+    .sort select { font: inherit; color: inherit; background: #fff; border: 1px solid #547064; border-radius: .3rem; padding: .25rem .45rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav aria-label="Справочник"><a href="../../">Приятели на Русия</a> · <a href="../../oshte/">Още групи, страници и канали</a> · <a href="../">Публикация 36 / групи</a></nav>
+    <h1>Публикация36 / профили и страница</h1>
+    <p><a href="https://www.facebook.com/ludmil.millev/posts/pfbid0sjLap3An3E3CbayMcdxCTnfB5DyG6kzAEBzYiQ8sKdSNp9N3uqtDMFa2tk3nnyHUl">Оригиналната публикация във Facebook</a></p>
+    <h2>Профили и страници</h2>
+    <div class="sort" hidden>
+      <label for="shares-accounts-sort">Подреди по</label>
+      <select id="shares-accounts-sort" data-sort-table="shares-accounts" aria-controls="shares-accounts"><option value="name">Име</option><option value="status">Статус</option><option value="approvals">Одобрения</option><option value="comments">Коментари</option><option value="sequence">Пореден №</option></select>
+    </div>
+    <div class="table-wrap" role="region" aria-label="Профили и страници" tabindex="0">
+      <table id="shares-accounts">
+        <thead><tr><th scope="col" data-sort-key="name">Име</th><th scope="col" data-sort-key="status">Статус</th><th scope="col" data-sort-key="approvals">Одобрения</th><th scope="col" data-sort-key="comments">Коментари</th><th scope="col" data-sort-key="sequence">№</th></tr></thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script defer src="../../group-tables.js"></script>
+</body>
+</html>
