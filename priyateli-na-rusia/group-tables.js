@@ -23,14 +23,21 @@ for (const control of document.querySelectorAll("select[data-sort-table]")) {
     const ordered = rows.slice();
     if (control.value === "name") {
       ordered.sort(compareNames);
-    } else if (control.value === "members") {
+    } else if (control.value === "status") {
       ordered.sort((first, second) =>
-        numericValue(second, "members", -1) - numericValue(first, "members", -1)
+        byName(first.cells[columns.status].textContent, second.cells[columns.status].textContent)
         || compareNames(first, second)
       );
-    } else if (control.value === "number") {
+    } else if (["members", "approvals", "comments"].includes(control.value)) {
+      const key = control.value;
       ordered.sort((first, second) =>
-        numericValue(first, "number", Infinity) - numericValue(second, "number", Infinity)
+        numericValue(second, key, -1) - numericValue(first, key, -1)
+        || compareNames(first, second)
+      );
+    } else if (["number", "sequence"].includes(control.value)) {
+      const key = control.value;
+      ordered.sort((first, second) =>
+        numericValue(first, key, Infinity) - numericValue(second, key, Infinity)
       );
     }
     body.append(...ordered);
